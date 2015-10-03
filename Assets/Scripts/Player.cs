@@ -6,7 +6,9 @@ public class Player : MonoBehaviour {
     public Material OpaqueMat;
     public Material TransperentMat;
     public GameObject helmetScreen;
-   
+
+    public bool HoldingItem;
+
     public void ChangeView(bool caught)
     {
         if (caught)

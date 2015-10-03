@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 using UnityStandardAssets.Characters.FirstPerson;
 
 public class PlayerManager : MonoBehaviour {
 
-    public GameObject[] actors;
+    public List<GameObject> actors;
     public int currentActor;
 
     // Use this for initialization
@@ -28,56 +28,41 @@ public class PlayerManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.K))
             actors[currentActor].GetComponent<Player>().ChangeView(false);
 
-        for (int i = 0; i < actors.Length; i++)
+        if (actors.Count > 0)
         {
-            for (int j = 0; j < actors.Length; j++)
+            bool viewingPlayer = false;
+            for (int i = 0; i < actors.Count; i++)
             {
-                if (i == j)
-                    break;
-                else
+                if (i != currentActor)
                 {
-                    Vector3 ori = actors[i].transform.localPosition;
-                    Vector3 dir = actors[j].transform.localPosition - actors[i].transform.localPosition;
+                    Vector3 ori = actors[currentActor].transform.position;
+                    Vector3 dir = actors[i].transform.position - actors[currentActor].transform.position;
                     Ray r = new Ray(ori, dir);
                     RaycastHit hit;
                     if (Physics.Raycast(r, out hit))
                     {
-                        Debug.Log("Hit Something");
-                        Debug.Log(hit.collider.tag);
                         if (hit.collider.tag == "Player")
                         {
-                            actors[i].GetComponent<Player>().ChangeView(true);
-                            actors[j].GetComponent<Player>().ChangeView(true);
-                        }
-                        else
-                        {
-                            actors[i].GetComponent<Player>().ChangeView(false);
-                            actors[j].GetComponent<Player>().ChangeView(false);
+                            viewingPlayer = true;
                         }
                     }
-
                 }
             }
+            actors[currentActor].GetComponent<Player>().ChangeView(viewingPlayer);
         }
 
-        Debug.DrawRay(actors[0].transform.position, actors[1].transform.position - actors[0].transform.position, Color.black);
-        Debug.DrawRay(actors[1].transform.position, actors[2].transform.position - actors[1].transform.position, Color.black);
-        Debug.DrawRay(actors[2].transform.position, actors[0].transform.position - actors[2].transform.position, Color.black);
+        //Debug.DrawRay(actors[0].transform.position, actors[1].transform.position - actors[0].transform.position, Color.black);
+        //Debug.DrawRay(actors[1].transform.position, actors[2].transform.position - actors[1].transform.position, Color.black);
+        //Debug.DrawRay(actors[2].transform.position, actors[0].transform.position - actors[2].transform.position, Color.black);
     }
-
-    void OnDrawGizmos()
-    {
-        
-    }
-
 
     void SwitchActor(int id)
     {
-        if (id > actors.Length)
+        if (id > actors.Count)
             return;
 
         currentActor = id;
-        for (int i = 0; i < actors.Length; i++)
+        for (int i = 0; i < actors.Count; i++)
         {
             if (id == i)
                 ModifyActor(actors[i], true);
@@ -85,8 +70,6 @@ public class PlayerManager : MonoBehaviour {
                 ModifyActor(actors[i], false);
         }
     }
-
-
 
     void ModifyActor(GameObject g, bool changeTo)
     {

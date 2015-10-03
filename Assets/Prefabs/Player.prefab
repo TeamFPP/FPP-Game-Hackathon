@@ -117,7 +117,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.52767754, y: 1.04999995, z: -21.7700005}
+  m_LocalPosition: {x: 19.7275085, y: 1.04999995, z: -30.7646637}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 412408}
@@ -430,6 +430,7 @@ MonoBehaviour:
   OpaqueMat: {fileID: 2100000, guid: 5d7366c5e9d4b49499034a151d3ae614, type: 2}
   TransperentMat: {fileID: 2100000, guid: 2423be7a131e5e04687bc4bdef807556, type: 2}
   helmetScreen: {fileID: 166826}
+  HoldingItem: 0
 --- !u!136 &13615684
 CapsuleCollider:
   m_ObjectHideFlags: 1
