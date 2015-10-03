@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
@@ -6,6 +7,16 @@ EndProject
 Project("{F232E333-EB1E-E754-502B-C1BA81CFFE9C}") = "FPP-Game-Hackathon", "Assembly-CSharp.csproj", "{1DF9DEEC-71FA-2E4F-54AE-4AEDE75DD7B4}"
 EndProject
 Project("{F232E333-EB1E-E754-502B-C1BA81CFFE9C}") = "FPP-Game-Hackathon", "Assembly-CSharp-Editor.csproj", "{08729BBA-B573-AC0B-CA54-25DD1B7054FE}"
+=======
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FPP-Game-Hackathon.CSharp.Plugins", "FPP-Game-Hackathon.CSharp.Plugins.csproj", "{4DEAAD86-7F8D-BBC9-9817-53CF35CB2ECE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FPP-Game-Hackathon.CSharp", "FPP-Game-Hackathon.CSharp.csproj", "{8FA7FA8B-51AE-A05F-B5DF-1986467ACD9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FPP-Game-Hackathon.CSharp.Editor", "FPP-Game-Hackathon.CSharp.Editor.csproj", "{1AFB7775-9161-A84F-2FD1-522AB349C3E4}"
+>>>>>>> origin/master
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +24,7 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
 		{06116168-5763-BBB7-6027-DE0D34908971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{06116168-5763-BBB7-6027-DE0D34908971}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06116168-5763-BBB7-6027-DE0D34908971}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -25,10 +37,25 @@ Global
 		{08729BBA-B573-AC0B-CA54-25DD1B7054FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08729BBA-B573-AC0B-CA54-25DD1B7054FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08729BBA-B573-AC0B-CA54-25DD1B7054FE}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{4DEAAD86-7F8D-BBC9-9817-53CF35CB2ECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DEAAD86-7F8D-BBC9-9817-53CF35CB2ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DEAAD86-7F8D-BBC9-9817-53CF35CB2ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DEAAD86-7F8D-BBC9-9817-53CF35CB2ECE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FA7FA8B-51AE-A05F-B5DF-1986467ACD9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FA7FA8B-51AE-A05F-B5DF-1986467ACD9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FA7FA8B-51AE-A05F-B5DF-1986467ACD9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FA7FA8B-51AE-A05F-B5DF-1986467ACD9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AFB7775-9161-A84F-2FD1-522AB349C3E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AFB7775-9161-A84F-2FD1-522AB349C3E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AFB7775-9161-A84F-2FD1-522AB349C3E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AFB7775-9161-A84F-2FD1-522AB349C3E4}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> origin/master
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+<<<<<<< HEAD
 		GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
@@ -49,4 +76,6 @@ Global
 		$3.scope = text/plain
 	EndGlobalSection
 
+=======
+>>>>>>> origin/master
 EndGlobal
